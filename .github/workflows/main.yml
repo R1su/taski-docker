@@ -56,7 +56,7 @@ jobs:
 # Тут задачи тестирования и сборки образа
 # ...
 # Добавляем новую задачу: деплой приложения
-build_and_push_to_docker_hub:
+  build_and_push_to_docker_hub:
     name: Push Docker image to DockerHub
     runs-on: ubuntu-latest
     needs: tests
@@ -90,7 +90,7 @@ build_and_push_to_docker_hub:
           # Для каждого пересобранного образа 
           # устанавливаем тег latest, чтобы потом
           # на сервере и в docker-compose.yml не указывать версию
-          tags: pasha.voinov.2000@mail.ru/taski_backend:latest
+          tags: r1su/taski_backend:latest
   frontend_tests:
     runs-on: ubuntu-latest
 
